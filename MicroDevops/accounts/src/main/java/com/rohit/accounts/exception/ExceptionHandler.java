@@ -20,5 +20,15 @@ public class ExceptionHandler {
        );
        return new ResponseEntity<>(errorResponse,HttpStatus.BAD_REQUEST);
     }
+    @org.springframework.web.bind.annotation.ExceptionHandler(ResourceNotFoundException.class)
+    public ResponseEntity<ErrorResponseDto>ResourceNotExistException(ResourceNotFoundException exception, WebRequest request){
+        ErrorResponseDto errorResponse=new ErrorResponseDto(
+                request.getDescription(false),
+                HttpStatus.NOT_FOUND,
+                exception.getMessage(),
+                LocalDateTime.now()
+        );
+        return new ResponseEntity<>(errorResponse,HttpStatus.BAD_REQUEST);
+    }
 
 }
