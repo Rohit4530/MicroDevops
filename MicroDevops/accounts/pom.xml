@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.rohit.accounts</groupId>
-	<artifactId>accounts</artifactId>
+	<artifactId>AccountsService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>accounts</name>
 	<description>Demo project for Spring Boot</description>
